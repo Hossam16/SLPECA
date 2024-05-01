@@ -18,7 +18,7 @@
 # Application server home directory used during development. The path can not end with a slash or backslash.
 # On windows use / instead of \
 # Default: $APPSRV_HOME
-#appserver.home=/opt/jboss-as-7.1.1.Final
+appserver.home=/opt/wildfly
 #appserver.home=/opt/glassfish3/glassfish
 #appserver.home=/Program Files/wildfly-10.1.0Final
 #appserver.home=${env.APPSRV_HOME}
@@ -26,7 +26,7 @@
 # Which application server is used? Normally this is auto-detected from 'appserver.home' and should not be configured. 
 # Possible values: jboss, glassfish
 # Default: <auto-detect>
-#appserver.type=jboss
+appserver.type=jboss
 
 # To prevent accidental runs of tests or deploying the wrong thing in a production environment, we
 # could prevent this by setting this variable to either "true" or "false".
@@ -34,7 +34,7 @@
 # EJBCA instance.
 # Default: true
 #ejbca.productionmode=true
-#ejbca.productionmode=false
+ejbca.productionmode=false
 
 # Enable time limited builds by specifying an expiration date. EJBCA will check the expiration date during startup
 # and stop the deployment if the the build has expired according to the local system clock.

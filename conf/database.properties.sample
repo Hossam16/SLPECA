@@ -6,7 +6,7 @@
 # (e.g. 'java:/', '' or 'jdbc/')is automatically determined for each
 # application server.
 # default: EjbcaDS
-#datasource.jndi-name=EjbcaDS
+datasource.jndi-name=EjbcaDS
 
 #
 # For building and installing EJBCA on an application server only database.name needs to be set. 
@@ -19,7 +19,7 @@
 # (Note that the names below are fixed for the database type, it is not the name of your database instance.)
 # Default: h2
 # For MariaDB, use "mysql"
-#database.name=mysql
+database.name=mysql
 #database.name=postgres
 #database.name=mssql
 #database.name=oracle
@@ -34,7 +34,7 @@
 # certificate data may speed up searching for certificates if there are lots of
 # them (>100Million).
 # Default: false
-#database.useSeparateCertificateTable=true
+database.useSeparateCertificateTable=true
 
 #
 # The below settings are needed to build and run tools the interact directly with the database
@@ -47,7 +47,7 @@
 # Database connection URL.
 # This is the URL used to connect to the database, used to configure a new datasource in JBoss.
 # Default: jdbc:h2:~/ejbcadb;DB_CLOSE_DELAY=-1
-#database.url=jdbc:mysql://127.0.0.1:3306/ejbca
+database.url=jdbc:mysql://127.0.0.1:3306/ejbca
 #database.url=jdbc:mysql://127.0.0.1:3306/ejbca?characterEncoding=UTF-8
 #database.url=jdbc:postgresql://127.0.0.1/ejbca
 #database.url=jdbc:sqlserver://localhost:1433;DatabaseName=ejbca
@@ -63,7 +63,7 @@
 # The JEE server needs to be configured with the appropriate JDBC driver for the selected database
 # The Default h2 works (as test database) on JBoss 7, on JBoss 5 use org.hsqldb.jdbcDriver
 # Default: h2
-#database.driver=org.mariadb.jdbc.Driver
+database.driver=org.mariadb.jdbc.Driver
 #database.driver=com.mysql.jdbc.Driver
 #database.driver=org.postgresql.Driver
 #database.driver=com.microsoft.sqlserver.jdbc.SQLServerDriver
@@ -77,8 +77,8 @@
 
 # Database username.
 # Default: sa (works with H2 on JBoss 7)
-#database.username=ejbca
+database.username=ejbca
 
 # Database password.
 # Default: sa (works with H2 on JBoss 7)
-#database.password=ejbca
+database.password=ejbca
